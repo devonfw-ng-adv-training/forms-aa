@@ -21,7 +21,7 @@
     <mat-form-field>
       <label for="city">City</label>
       <input id="city" matInput placeholder="City" formControlName="city">
-      <mat-error>
+      <mat-error *ngIf="form.get('city').hasError('required')">
         City is <strong>required</strong>
       </mat-error>
     </mat-form-field>

@@ -4,13 +4,22 @@ import {
   ControlValueAccessor,
   FormControl,
   FormGroup,
+  FormGroupDirective,
   NG_VALIDATORS,
   NG_VALUE_ACCESSOR,
+  NgForm,
   ValidationErrors,
   Validator,
   Validators
 } from '@angular/forms';
 import {Address} from './address';
+import {ErrorStateMatcher} from '@angular/material';
+
+class AddressErrorStateMatcher implements ErrorStateMatcher {
+  isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
+    return control.invalid && control.touched;
+  }
+}
 
 @Component({
   selector: 'app-address',
@@ -24,6 +33,10 @@ import {Address} from './address';
       provide: NG_VALIDATORS,
       useExisting: forwardRef(() => AddressComponent),
       multi: true
+    },
+    {
+      provide: ErrorStateMatcher,
+      useClass: AddressErrorStateMatcher
     }
   ]
 })
@@ -45,7 +58,6 @@ export class AddressComponent implements OnInit, ControlValueAccessor, Validator
   }
 
   writeValue(val: Address): void {
-    debugger;
     val && this.form.setValue(val, {emitEvent: false});
   }
 
@@ -68,11 +80,9 @@ export class AddressComponent implements OnInit, ControlValueAccessor, Validator
     const submitted: SimpleChange = changes.isParentSubmitted;
     this.isParentSubmitted = submitted.currentValue;
     if (this.isParentSubmitted) {
-      // workaround for the angular material bug: https://github.com/angular/material2/issues/7920
-      Object.keys(this.form.controls).forEach(key => {
-        this.form.get(key).markAsTouched();
-      });
+      this.form.markAllAsTouched();
     } else if (this.form) {
+      // reset form if submitted gets changed back to false
       this.form.reset();
     }
   }
