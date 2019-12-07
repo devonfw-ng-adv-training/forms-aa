@@ -1,9 +1,16 @@
-import {Component, OnInit} from '@angular/core';
-import {ControlValueAccessor, FormControl, FormGroup, Validators} from '@angular/forms';
+import {Component, forwardRef, OnInit} from '@angular/core';
+import {ControlValueAccessor, FormControl, FormGroup, NG_VALUE_ACCESSOR, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-address',
   templateUrl: './address.component.html',
+  providers: [
+    {
+      provide: NG_VALUE_ACCESSOR,
+      useExisting: forwardRef(() => AddressComponent),
+      multi: true,
+    },
+  ]
 })
 export class AddressComponent implements OnInit, ControlValueAccessor {
   form: FormGroup;
