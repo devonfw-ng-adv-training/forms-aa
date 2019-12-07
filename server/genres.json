@@ -1,22 +1,6 @@
 [
-  {
-    "id": 1,
-    "name": "IT",
-    "icon": "favorite"
-  },
-  {
-    "id": 1,
-    "name": "SciFi",
-    "icon": "favorite"
-  },
-  {
-    "id": 1,
-    "name": "Bestseller",
-    "icon": "favorite"
-  },
-  {
-    "id": 1,
-    "name": "Biographic",
-    "icon": "favorite"
-  }
+  {"id": 1, "name": "IT", "icon": "favorite"},
+  {"id": 2, "name": "Science fiction", "icon": "star_rate"},
+  {"id": 3, "name": "Fantasy", "icon": "pets"},
+  {"id": 4, "name": "Crime", "icon": "fingerprint"}
 ]
