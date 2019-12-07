@@ -37,7 +37,8 @@ export class BookDetailsComponent implements OnInit {
           Validators.maxLength(13),
           Validators.pattern('[0-9]*')
         ]
-      ]
+      ],
+      genre: ['', Validators.required],
     });
 
     this.route.data.subscribe((data: { book: Book, bookGenres: Genre[] }) => {
@@ -46,7 +47,6 @@ export class BookDetailsComponent implements OnInit {
       }
 
       if (data.bookGenres) {
-        debugger;
         this.genres = data.bookGenres;
       }
 

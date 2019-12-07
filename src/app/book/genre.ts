@@ -1,5 +1,5 @@
-export interface Genre {
-  id: number;
-  name: string;
-  icon: string;
+import {SelectBoxItem} from '../shared/custom-components/customized-select-box/select-box-item';
+
+export interface Genre extends SelectBoxItem {
+
 }
