@@ -1,8 +1,9 @@
-import { BookService } from './../book.service';
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router, ActivatedRoute } from '@angular/router';
-import { Book } from '../book';
+import {BookService} from './../book.service';
+import {Component, OnInit} from '@angular/core';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {ActivatedRoute, Router} from '@angular/router';
+import {Book} from '../book';
+import {Genre} from '../genre';
 
 @Component({
   selector: 'app-book-details',
@@ -13,6 +14,7 @@ export class BookDetailsComponent implements OnInit {
   book: Book;
   submitted: boolean;
   bookForm: FormGroup;
+  genres: Genre[];
 
   constructor(
     private formBuilder: FormBuilder,
@@ -20,7 +22,7 @@ export class BookDetailsComponent implements OnInit {
     private router: Router,
     private route: ActivatedRoute
   ) {
-    this.book = new Book();
+    this.book = {title: null, genre: null, isbn: null, id: null, author: null};
   }
 
   ngOnInit() {
@@ -38,9 +40,14 @@ export class BookDetailsComponent implements OnInit {
       ]
     });
 
-    this.route.data.subscribe((data: { book: Book }) => {
+    this.route.data.subscribe((data: { book: Book, bookGenres: Genre[] }) => {
       if (data.book) {
         this.book = data.book;
+      }
+
+      if (data.bookGenres) {
+        debugger;
+        this.genres = data.bookGenres;
       }
 
       this.bookForm.setValue(this.book);

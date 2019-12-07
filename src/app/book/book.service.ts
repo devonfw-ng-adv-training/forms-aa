@@ -9,8 +9,8 @@ export class BookService {
 
   constructor(private http: HttpClient) {}
 
-  findAll(): Observable<Book> {
-    return this.http.get<Book>(BookService.BOOK_URI);
+  findAll(): Observable<Book[]> {
+    return this.http.get<Book[]>(BookService.BOOK_URI);
   }
 
   findOne(id: number): Observable<Book> {

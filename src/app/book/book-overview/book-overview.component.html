@@ -3,7 +3,7 @@
     <mat-card class="book-card">
       <mat-card-title-group>
         <mat-card-title>{{ book.title }}</mat-card-title>
-        <img
+        <img alt="{{book.title}}"
           class="book-card-img"
           [src]="'http://covers.openlibrary.org/b/isbn/' + book.isbn + '-S.jpg'"
         />

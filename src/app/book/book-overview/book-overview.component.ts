@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { BookService } from '../book.service';
-import { Book } from '../book';
-import { Router } from '@angular/router';
+import {Component, OnInit} from '@angular/core';
+import {BookService} from '../book.service';
+import {Book} from '../book';
+import {Router} from '@angular/router';
+import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-book-overview',
@@ -9,9 +10,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./book-overview.component.scss']
 })
 export class BookOverviewComponent implements OnInit {
-  books$;
+  books$: Observable<Book[]>;
 
-  constructor(private book: BookService, private router: Router) {}
+  constructor(private book: BookService, private router: Router) {
+  }
 
   ngOnInit() {
     this.books$ = this.book.findAll();

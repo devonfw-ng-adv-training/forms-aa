@@ -1,6 +1,9 @@
-export class Book {
-  id: number = null;
-  author: string = null;
-  title: string = null;
-  isbn: string = null;
+import {Genre} from './genre';
+
+export interface Book {
+  id: number;
+  author: string;
+  title: string;
+  isbn: string;
+  genre: Genre;
 }

@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "IT",
+    "icon": "favorite"
+  },
+  {
+    "id": 1,
+    "name": "SciFi",
+    "icon": "favorite"
+  },
+  {
+    "id": 1,
+    "name": "Bestseller",
+    "icon": "favorite"
+  },
+  {
+    "id": 1,
+    "name": "Biographic",
+    "icon": "favorite"
+  }
+]
