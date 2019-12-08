@@ -1,67 +1,30 @@
-<form *ngIf="form" [formGroup]="form">
-  <div formArrayName="roomTypes">
-    <div *ngFor="let roomType of getMainFormArray('roomTypes'); let index = index" [formGroupName]="index">
+<form
+  *ngIf="form$ | async as form"
+  [formGroup]="form">
+  <div
+    formArrayName="roomTypes">
+    <div
+      *ngFor="let roomType of form.controls['roomTypes'].controls; let index = index"
+      [formGroupName]="index">
       {{index}}
-      <div formArrayName="mealTypes">
-        <div *ngFor="let mealType of getNestedFormArray(roomType,'mealTypes'); let mealtypeIndex = index"
-             [formGroupName]="mealtypeIndex">
+      <div
+        formArrayName="mealTypes">
+        <div
+          *ngFor="let mealType of roomType.controls['mealTypes'].controls; let mealtypeIndex = index"
+          [formGroupName]="mealtypeIndex">
           mealtype {{mealtypeIndex}}
-          <div formArrayName="marketGroups">
-            <div *ngFor="let marketGroup of getNestedFormArray(mealType,'marketGroups');let marketGroupIndex = index"
-                 [formGroupName]="marketGroupIndex">
+          <div
+            formArrayName="marketGroups">
+            <div
+              *ngFor="let marketGroup of mealType.controls['marketGroups'].controls; let marketGroupIndex = index"
+              [formGroupName]="marketGroupIndex">
               marketGroupIndex {{marketGroupIndex}}
-              <div formArrayName="rateSegments">
-                <div
-                  *ngFor="let rateSegment of getNestedFormArray(marketGroup,'rateSegments');let rateSegmentIndex = index"
-                  [formGroupName]="rateSegmentIndex">
-                  rateSegmentIndex {{rateSegmentIndex}}
-                  <div formArrayName="hotelSeasons">
-                    <div class="fifth_border"
-                         *ngFor="let hotelseason of getNestedFormArray(rateSegment,'hotelSeasons');let hotelseasonIndex = index"
-                         [formGroupName]="hotelseasonIndex">
-                      hotelseasonIndex {{hotelseasonIndex}}
-                      <div formArrayName="rates">
-                        <div *ngFor="let rate of getNestedFormArray(hotelseason,'rates');let rateIndex = index"
-                             [formGroupName]="rateIndex">
-                          <div style="display:flex;flex-flow;row">
-                            <div>
-                              <p>SGL</p>
-                              <input class="input text_right" type="text" formControlName="singlePrice">
-                            </div>
-                            <div>
-                              <p>DLB/TWN</p>
-                              <input class="input text_right" type="text" formControlName="doublePrice">
-                            </div>
-                            <div>
-                              <p>EX-Adult</p>
-                              <input class="input text_right" type="text" formControlName="xbedPrice">
-                            </div>
-                            <div>
-                              <p>EX-Child</p>
-                              <input class="input text_right" type="text" formControlName="xbedChildPrice">
-                            </div>
-                            <div>
-                              <p>Adult BF</p>
-                              <input class="input text_right" type="text" formControlName="bfPrice">
-                            </div>
-                            <div>
-                              <p>Child BF</p>
-                              <input class="input text_right" type="text" formControlName="bfChildPrice">
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <app-market-group-form [marketGroupForm]="marketGroup"></app-market-group-form>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-
   <pre>{{form.value | json}}</pre>
 </form>
-

@@ -1,0 +1,49 @@
+<div [formGroup]="marketGroupForm">
+  <div formArrayName="rateSegments">
+    <div
+      *ngFor="let rateSegment of marketGroupForm.controls['rateSegments'].controls; let rateSegmentIndex = index"
+      [formGroupName]="rateSegmentIndex">
+      rateSegmentIndex {{rateSegmentIndex}}
+      <div formArrayName="hotelSeasons">
+        <div
+          class="fifth_border"
+          *ngFor="let hotelseason of rateSegment.controls['hotelSeasons'].controls; let hotelseasonIndex = index"
+          [formGroupName]="hotelseasonIndex">
+          hotelseasonIndex {{hotelseasonIndex}}
+          <div formArrayName="rates">
+            <div
+              *ngFor="let rate of hotelseason.controls['rates'].controls; let rateIndex = index"
+              [formGroupName]="rateIndex">
+              <div style="display:flex;flex-flow:row">
+                <div>
+                  <p>SGL</p>
+                  <input class="input text_right" type="text" formControlName="singlePrice">
+                </div>
+                <div>
+                  <p>DLB/TWN</p>
+                  <input class="input text_right" type="text" formControlName="doublePrice">
+                </div>
+                <div>
+                  <p>EX-Adult</p>
+                  <input class="input text_right" type="text" formControlName="xbedPrice">
+                </div>
+                <div>
+                  <p>EX-Child</p>
+                  <input class="input text_right" type="text" formControlName="xbedChildPrice">
+                </div>
+                <div>
+                  <p>Adult BF</p>
+                  <input class="input text_right" type="text" formControlName="bfPrice">
+                </div>
+                <div>
+                  <p>Child BF</p>
+                  <input class="input text_right" type="text" formControlName="bfChildPrice">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
