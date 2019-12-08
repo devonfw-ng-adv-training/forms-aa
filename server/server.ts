@@ -6,6 +6,7 @@ const {find, includes, max, map, isString} = require('lodash');
 
 const books = JSON.parse(readFileSync.readFileSync(__dirname + '/books.json', 'utf-8').toString());
 const genres = JSON.parse(readFileSync.readFileSync(__dirname + '/genres.json', 'utf-8').toString());
+const data = JSON.parse(readFileSync.readFileSync(__dirname + '/data.json', 'utf-8').toString());
 
 function* idSequence(initial) {
   let i = initial;
@@ -38,6 +39,11 @@ app.use(bodyParser.json());
 
 app.get('/api/book', (req, res) => {
     res.json(books);
+  }
+);
+
+app.get('/api/data', (req, res) => {
+    res.json(data);
   }
 );
 

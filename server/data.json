@@ -1,0 +1,912 @@
+{
+  "id": "bef2dd35-6165-48e4-bb73-0f4a6e8cba43",
+  "currencyId": "233aadd2-5d16-4df9-8b3d-a632a90cc746",
+  "hotelYearId": "713b1389-24f2-4818-aa81-48d82e98ff5b",
+  "priceTaxTypeId": "00000000-0000-0000-0000-000000000000",
+  "code": "WS2",
+  "name": "Wholesale 2",
+  "createBy": "system",
+  "createDate": "2019-01-26T14:49:31.080Z",
+  "lastUpdateBy": "userUpdate",
+  "lastUpdateDate": "2019-01-28T11:11:40.541Z",
+  "remark": "",
+  "internalRemark": "",
+  "roomTypes": [
+    {
+      "chk": true,
+      "roomTypeId": "3daf6074-4279-4ef7-a3ae-92e5676684c3",
+      "mealTypes": [
+        {
+          "chk": true,
+          "mealTypeId": "8ac6b3d1-9f81-4fe3-8bac-96a384ccc913",
+          "marketGroups": [
+            {
+              "chk": true,
+              "markets": [
+                {
+                  "marketId": "ffffffff-ffff-ffff-ffff-ffffffffffff"
+                }
+              ],
+              "rateSegments": [
+                {
+                  "chk": true,
+                  "rateSegmentId": "00000000-0000-0000-0000-000000000000",
+                  "hotelSeasons": [
+                    {
+                      "chk": true,
+                      "hotelSeasonId": "4cf7013a-cf05-4db9-9e0c-6c5d07957da5",
+                      "rates": [
+                        {
+                          "rateCodeId": "00000000-0000-0000-0000-000000000000",
+                          "cancellationPolicyId": "16c4f160-6288-42b7-9aac-457f04a71616",
+                          "dayFlag": "1234567",
+                          "singlePrice": "8,100.00",
+                          "doublePrice": "8,100.00",
+                          "xbedPrice": "1,000.00",
+                          "xbedChildPrice": "500.00",
+                          "bfPrice": "400.00",
+                          "bfChildPrice": "200.00",
+                          "unitMonth": "0.00",
+                          "unitDay": "0.00",
+                          "minStay": 0
+                        }
+                      ]
+                    },
+                    {
+                      "chk": true,
+                      "hotelSeasonId": "453fcdf8-ff67-41e7-921e-e1c775f0704c",
+                      "rates": [
+                        {
+                          "rateCodeId": "00000000-0000-0000-0000-000000000000",
+                          "cancellationPolicyId": "16c4f160-6288-42b7-9aac-457f04a71616",
+                          "dayFlag": "1234567",
+                          "singlePrice": "9,100.00",
+                          "doublePrice": "9,100.00",
+                          "xbedPrice": "1,000.00",
+                          "xbedChildPrice": "500.00",
+                          "bfPrice": "400.00",
+                          "bfChildPrice": "200.00",
+                          "unitMonth": "0.00",
+                          "unitDay": "0.00",
+                          "minStay": 0
+                        }
+                      ]
+                    },
+                    {
+                      "chk": true,
+                      "hotelSeasonId": "a7018879-0cfc-4244-8d60-cea5c943e7d5",
+                      "rates": [
+                        {
+                          "rateCodeId": "00000000-0000-0000-0000-000000000000",
+                          "cancellationPolicyId": "16c4f160-6288-42b7-9aac-457f04a71616",
+                          "dayFlag": "1234567",
+                          "singlePrice": "10,100.00",
+                          "doublePrice": "10,100.00",
+                          "xbedPrice": "1,000.00",
+                          "xbedChildPrice": "500.00",
+                          "bfPrice": "400.00",
+                          "bfChildPrice": "200.00",
+                          "unitMonth": "0.00",
+                          "unitDay": "0.00",
+                          "minStay": 0
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "chk": true,
+              "markets": [
+                {
+                  "marketId": "4f1c1628-59c7-48bb-818e-771debf38aba"
+                }
+              ],
+              "rateSegments": [
+                {
+                  "chk": true,
+                  "rateSegmentId": "00000000-0000-0000-0000-000000000000",
+                  "hotelSeasons": [
+                    {
+                      "chk": true,
+                      "hotelSeasonId": "4cf7013a-cf05-4db9-9e0c-6c5d07957da5",
+                      "rates": [
+                        {
+                          "rateCodeId": "00000000-0000-0000-0000-000000000000",
+                          "cancellationPolicyId": "16c4f160-6288-42b7-9aac-457f04a71616",
+                          "dayFlag": "1234567",
+                          "singlePrice": "7,500.00",
+                          "doublePrice": "7,500.00",
+                          "xbedPrice": "1,000.00",
+                          "xbedChildPrice": "500.00",
+                          "bfPrice": "400.00",
+                          "bfChildPrice": "200.00",
+                          "unitMonth": "0.00",
+                          "unitDay": "0.00",
+                          "minStay": 0
+                        }
+                      ]
+                    },
+                    {
+                      "chk": true,
+                      "hotelSeasonId": "a7018879-0cfc-4244-8d60-cea5c943e7d5",
+                      "rates": [
+                        {
+                          "rateCodeId": "00000000-0000-0000-0000-000000000000",
+                          "cancellationPolicyId": "16c4f160-6288-42b7-9aac-457f04a71616",
+                          "dayFlag": "1234567",
+                          "singlePrice": "9,500.00",
+                          "doublePrice": "9,500.00",
+                          "xbedPrice": "1,000.00",
+                          "xbedChildPrice": "500.00",
+                          "bfPrice": "400.00",
+                          "bfChildPrice": "200.00",
+                          "unitMonth": "0.00",
+                          "unitDay": "0.00",
+                          "minStay": 0
+                        }
+                      ]
+                    },
+                    {
+                      "chk": true,
+                      "hotelSeasonId": "453fcdf8-ff67-41e7-921e-e1c775f0704c",
+                      "rates": [
+                        {
+                          "rateCodeId": "00000000-0000-0000-0000-000000000000",
+                          "cancellationPolicyId": "16c4f160-6288-42b7-9aac-457f04a71616",
+                          "dayFlag": "1234567",
+                          "singlePrice": "8,500.00",
+                          "doublePrice": "8,500.00",
+                          "xbedPrice": "1,000.00",
+                          "xbedChildPrice": "500.00",
+                          "bfPrice": "400.00",
+                          "bfChildPrice": "200.00",
+                          "unitMonth": "0.00",
+                          "unitDay": "0.00",
+                          "minStay": 0
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "chk": true,
+      "roomTypeId": "90dbceb0-0199-465c-9a67-b8c10d32f96d",
+      "mealTypes": [
+        {
+          "chk": true,
+          "mealTypeId": "00000000-0000-0000-0000-000000000000",
+          "marketGroups": [
+            {
+              "chk": true,
+              "markets": [
+                {
+                  "marketId": "ffffffff-ffff-ffff-ffff-ffffffffffff"
+                }
+              ],
+              "rateSegments": [
+                {
+                  "chk": true,
+                  "rateSegmentId": "00000000-0000-0000-0000-000000000000",
+                  "hotelSeasons": [
+                    {
+                      "chk": true,
+                      "hotelSeasonId": "a7018879-0cfc-4244-8d60-cea5c943e7d5",
+                      "rates": [
+                        {
+                          "rateCodeId": "00000000-0000-0000-0000-000000000000",
+                          "cancellationPolicyId": "16c4f160-6288-42b7-9aac-457f04a71616",
+                          "dayFlag": "1234567",
+                          "singlePrice": "6,100.00",
+                          "doublePrice": "6,100.00",
+                          "xbedPrice": "1,000.00",
+                          "xbedChildPrice": "500.00",
+                          "bfPrice": "400.00",
+                          "bfChildPrice": "200.00",
+                          "unitMonth": "0.00",
+                          "unitDay": "0.00",
+                          "minStay": 0
+                        }
+                      ]
+                    },
+                    {
+                      "chk": true,
+                      "hotelSeasonId": "4cf7013a-cf05-4db9-9e0c-6c5d07957da5",
+                      "rates": [
+                        {
+                          "rateCodeId": "00000000-0000-0000-0000-000000000000",
+                          "cancellationPolicyId": "16c4f160-6288-42b7-9aac-457f04a71616",
+                          "dayFlag": "1234567",
+                          "singlePrice": "5,100.00",
+                          "doublePrice": "5,100.00",
+                          "xbedPrice": "1,000.00",
+                          "xbedChildPrice": "500.00",
+                          "bfPrice": "400.00",
+                          "bfChildPrice": "200.00",
+                          "unitMonth": "0.00",
+                          "unitDay": "0.00",
+                          "minStay": 0
+                        }
+                      ]
+                    },
+                    {
+                      "chk": true,
+                      "hotelSeasonId": "453fcdf8-ff67-41e7-921e-e1c775f0704c",
+                      "rates": [
+                        {
+                          "rateCodeId": "00000000-0000-0000-0000-000000000000",
+                          "cancellationPolicyId": "16c4f160-6288-42b7-9aac-457f04a71616",
+                          "dayFlag": "1234567",
+                          "singlePrice": "5,600.00",
+                          "doublePrice": "5,600.00",
+                          "xbedPrice": "1,000.00",
+                          "xbedChildPrice": "500.00",
+                          "bfPrice": "400.00",
+                          "bfChildPrice": "200.00",
+                          "unitMonth": "0.00",
+                          "unitDay": "0.00",
+                          "minStay": 0
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "chk": true,
+              "markets": [
+                {
+                  "marketId": "4f1c1628-59c7-48bb-818e-771debf38aba"
+                }
+              ],
+              "rateSegments": [
+                {
+                  "chk": true,
+                  "rateSegmentId": "00000000-0000-0000-0000-000000000000",
+                  "hotelSeasons": [
+                    {
+                      "chk": true,
+                      "hotelSeasonId": "4cf7013a-cf05-4db9-9e0c-6c5d07957da5",
+                      "rates": [
+                        {
+                          "rateCodeId": "00000000-0000-0000-0000-000000000000",
+                          "cancellationPolicyId": "16c4f160-6288-42b7-9aac-457f04a71616",
+                          "dayFlag": "1234567",
+                          "singlePrice": "4,500.00",
+                          "doublePrice": "4,500.00",
+                          "xbedPrice": "1,000.00",
+                          "xbedChildPrice": "500.00",
+                          "bfPrice": "400.00",
+                          "bfChildPrice": "200.00",
+                          "unitMonth": "0.00",
+                          "unitDay": "0.00",
+                          "minStay": 0
+                        }
+                      ]
+                    },
+                    {
+                      "chk": true,
+                      "hotelSeasonId": "453fcdf8-ff67-41e7-921e-e1c775f0704c",
+                      "rates": [
+                        {
+                          "rateCodeId": "00000000-0000-0000-0000-000000000000",
+                          "cancellationPolicyId": "16c4f160-6288-42b7-9aac-457f04a71616",
+                          "dayFlag": "1234567",
+                          "singlePrice": "5,000.00",
+                          "doublePrice": "5,000.00",
+                          "xbedPrice": "1,000.00",
+                          "xbedChildPrice": "500.00",
+                          "bfPrice": "400.00",
+                          "bfChildPrice": "200.00",
+                          "unitMonth": "0.00",
+                          "unitDay": "0.00",
+                          "minStay": 0
+                        }
+                      ]
+                    },
+                    {
+                      "chk": true,
+                      "hotelSeasonId": "a7018879-0cfc-4244-8d60-cea5c943e7d5",
+                      "rates": [
+                        {
+                          "rateCodeId": "00000000-0000-0000-0000-000000000000",
+                          "cancellationPolicyId": "16c4f160-6288-42b7-9aac-457f04a71616",
+                          "dayFlag": "1234567",
+                          "singlePrice": "5,500.00",
+                          "doublePrice": "5,500.00",
+                          "xbedPrice": "1,000.00",
+                          "xbedChildPrice": "500.00",
+                          "bfPrice": "400.00",
+                          "bfChildPrice": "200.00",
+                          "unitMonth": "0.00",
+                          "unitDay": "0.00",
+                          "minStay": 0
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "chk": true,
+          "mealTypeId": "8ac6b3d1-9f81-4fe3-8bac-96a384ccc913",
+          "marketGroups": [
+            {
+              "chk": true,
+              "markets": [
+                {
+                  "marketId": "4f1c1628-59c7-48bb-818e-771debf38aba"
+                }
+              ],
+              "rateSegments": [
+                {
+                  "chk": true,
+                  "rateSegmentId": "00000000-0000-0000-0000-000000000000",
+                  "hotelSeasons": [
+                    {
+                      "chk": true,
+                      "hotelSeasonId": "a7018879-0cfc-4244-8d60-cea5c943e7d5",
+                      "rates": [
+                        {
+                          "rateCodeId": "00000000-0000-0000-0000-000000000000",
+                          "cancellationPolicyId": "16c4f160-6288-42b7-9aac-457f04a71616",
+                          "dayFlag": "1234567",
+                          "singlePrice": "6,500.00",
+                          "doublePrice": "6,500.00",
+                          "xbedPrice": "1,000.00",
+                          "xbedChildPrice": "500.00",
+                          "bfPrice": "400.00",
+                          "bfChildPrice": "200.00",
+                          "unitMonth": "0.00",
+                          "unitDay": "0.00",
+                          "minStay": 0
+                        }
+                      ]
+                    },
+                    {
+                      "chk": true,
+                      "hotelSeasonId": "453fcdf8-ff67-41e7-921e-e1c775f0704c",
+                      "rates": [
+                        {
+                          "rateCodeId": "00000000-0000-0000-0000-000000000000",
+                          "cancellationPolicyId": "16c4f160-6288-42b7-9aac-457f04a71616",
+                          "dayFlag": "1234567",
+                          "singlePrice": "6,000.00",
+                          "doublePrice": "6,000.00",
+                          "xbedPrice": "1,000.00",
+                          "xbedChildPrice": "500.00",
+                          "bfPrice": "400.00",
+                          "bfChildPrice": "200.00",
+                          "unitMonth": "0.00",
+                          "unitDay": "0.00",
+                          "minStay": 0
+                        }
+                      ]
+                    },
+                    {
+                      "chk": true,
+                      "hotelSeasonId": "4cf7013a-cf05-4db9-9e0c-6c5d07957da5",
+                      "rates": [
+                        {
+                          "rateCodeId": "00000000-0000-0000-0000-000000000000",
+                          "cancellationPolicyId": "16c4f160-6288-42b7-9aac-457f04a71616",
+                          "dayFlag": "1234567",
+                          "singlePrice": "5,500.00",
+                          "doublePrice": "5,500.00",
+                          "xbedPrice": "1,000.00",
+                          "xbedChildPrice": "500.00",
+                          "bfPrice": "400.00",
+                          "bfChildPrice": "200.00",
+                          "unitMonth": "0.00",
+                          "unitDay": "0.00",
+                          "minStay": 0
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "chk": true,
+              "markets": [
+                {
+                  "marketId": "ffffffff-ffff-ffff-ffff-ffffffffffff"
+                }
+              ],
+              "rateSegments": [
+                {
+                  "chk": true,
+                  "rateSegmentId": "00000000-0000-0000-0000-000000000000",
+                  "hotelSeasons": [
+                    {
+                      "chk": true,
+                      "hotelSeasonId": "453fcdf8-ff67-41e7-921e-e1c775f0704c",
+                      "rates": [
+                        {
+                          "rateCodeId": "00000000-0000-0000-0000-000000000000",
+                          "cancellationPolicyId": "16c4f160-6288-42b7-9aac-457f04a71616",
+                          "dayFlag": "1234567",
+                          "singlePrice": "6,600.00",
+                          "doublePrice": "6,600.00",
+                          "xbedPrice": "1,000.00",
+                          "xbedChildPrice": "500.00",
+                          "bfPrice": "400.00",
+                          "bfChildPrice": "200.00",
+                          "unitMonth": "0.00",
+                          "unitDay": "0.00",
+                          "minStay": 0
+                        }
+                      ]
+                    },
+                    {
+                      "chk": true,
+                      "hotelSeasonId": "4cf7013a-cf05-4db9-9e0c-6c5d07957da5",
+                      "rates": [
+                        {
+                          "rateCodeId": "00000000-0000-0000-0000-000000000000",
+                          "cancellationPolicyId": "16c4f160-6288-42b7-9aac-457f04a71616",
+                          "dayFlag": "1234567",
+                          "singlePrice": "6,100.00",
+                          "doublePrice": "6,100.00",
+                          "xbedPrice": "1,000.00",
+                          "xbedChildPrice": "500.00",
+                          "bfPrice": "400.00",
+                          "bfChildPrice": "200.00",
+                          "unitMonth": "0.00",
+                          "unitDay": "0.00",
+                          "minStay": 0
+                        }
+                      ]
+                    },
+                    {
+                      "chk": true,
+                      "hotelSeasonId": "a7018879-0cfc-4244-8d60-cea5c943e7d5",
+                      "rates": [
+                        {
+                          "rateCodeId": "00000000-0000-0000-0000-000000000000",
+                          "cancellationPolicyId": "16c4f160-6288-42b7-9aac-457f04a71616",
+                          "dayFlag": "1234567",
+                          "singlePrice": "7,100.00",
+                          "doublePrice": "7,100.00",
+                          "xbedPrice": "1,000.00",
+                          "xbedChildPrice": "500.00",
+                          "bfPrice": "400.00",
+                          "bfChildPrice": "200.00",
+                          "unitMonth": "0.00",
+                          "unitDay": "0.00",
+                          "minStay": 0
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "chk": true,
+      "roomTypeId": "354c7a95-84cf-42f9-9a88-b585e0b7c4be",
+      "mealTypes": [
+        {
+          "chk": true,
+          "mealTypeId": "00000000-0000-0000-0000-000000000000",
+          "marketGroups": [
+            {
+              "chk": true,
+              "markets": [
+                {
+                  "marketId": "4f1c1628-59c7-48bb-818e-771debf38aba"
+                }
+              ],
+              "rateSegments": [
+                {
+                  "chk": true,
+                  "rateSegmentId": "00000000-0000-0000-0000-000000000000",
+                  "hotelSeasons": [
+                    {
+                      "chk": true,
+                      "hotelSeasonId": "4cf7013a-cf05-4db9-9e0c-6c5d07957da5",
+                      "rates": [
+                        {
+                          "rateCodeId": "00000000-0000-0000-0000-000000000000",
+                          "cancellationPolicyId": "16c4f160-6288-42b7-9aac-457f04a71616",
+                          "dayFlag": "1234567",
+                          "singlePrice": "3,000.00",
+                          "doublePrice": "3,000.00",
+                          "xbedPrice": "1,000.00",
+                          "xbedChildPrice": "500.00",
+                          "bfPrice": "400.00",
+                          "bfChildPrice": "200.00",
+                          "unitMonth": "0.00",
+                          "unitDay": "0.00",
+                          "minStay": 0
+                        }
+                      ]
+                    },
+                    {
+                      "chk": true,
+                      "hotelSeasonId": "a7018879-0cfc-4244-8d60-cea5c943e7d5",
+                      "rates": [
+                        {
+                          "rateCodeId": "00000000-0000-0000-0000-000000000000",
+                          "cancellationPolicyId": "16c4f160-6288-42b7-9aac-457f04a71616",
+                          "dayFlag": "1234567",
+                          "singlePrice": "4,000.00",
+                          "doublePrice": "4,000.00",
+                          "xbedPrice": "1,000.00",
+                          "xbedChildPrice": "500.00",
+                          "bfPrice": "400.00",
+                          "bfChildPrice": "200.00",
+                          "unitMonth": "0.00",
+                          "unitDay": "0.00",
+                          "minStay": 0
+                        }
+                      ]
+                    },
+                    {
+                      "chk": true,
+                      "hotelSeasonId": "453fcdf8-ff67-41e7-921e-e1c775f0704c",
+                      "rates": [
+                        {
+                          "rateCodeId": "00000000-0000-0000-0000-000000000000",
+                          "cancellationPolicyId": "16c4f160-6288-42b7-9aac-457f04a71616",
+                          "dayFlag": "1234567",
+                          "singlePrice": "3,500.00",
+                          "doublePrice": "3,500.00",
+                          "xbedPrice": "1,000.00",
+                          "xbedChildPrice": "500.00",
+                          "bfPrice": "400.00",
+                          "bfChildPrice": "200.00",
+                          "unitMonth": "0.00",
+                          "unitDay": "0.00",
+                          "minStay": 0
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "chk": true,
+      "roomTypeId": "1d5ac3cb-6d22-489f-b9f5-daaa6813a9c9",
+      "mealTypes": [
+        {
+          "chk": true,
+          "mealTypeId": "00000000-0000-0000-0000-000000000000",
+          "marketGroups": [
+            {
+              "chk": true,
+              "markets": [
+                {
+                  "marketId": "4f1c1628-59c7-48bb-818e-771debf38aba"
+                }
+              ],
+              "rateSegments": [
+                {
+                  "chk": true,
+                  "rateSegmentId": "00000000-0000-0000-0000-000000000000",
+                  "hotelSeasons": [
+                    {
+                      "chk": true,
+                      "hotelSeasonId": "a7018879-0cfc-4244-8d60-cea5c943e7d5",
+                      "rates": [
+                        {
+                          "rateCodeId": "00000000-0000-0000-0000-000000000000",
+                          "cancellationPolicyId": "16c4f160-6288-42b7-9aac-457f04a71616",
+                          "dayFlag": "1234567",
+                          "singlePrice": "3,500.00",
+                          "doublePrice": "3,500.00",
+                          "xbedPrice": "1,000.00",
+                          "xbedChildPrice": "500.00",
+                          "bfPrice": "400.00",
+                          "bfChildPrice": "200.00",
+                          "unitMonth": "0.00",
+                          "unitDay": "0.00",
+                          "minStay": 0
+                        }
+                      ]
+                    },
+                    {
+                      "chk": true,
+                      "hotelSeasonId": "453fcdf8-ff67-41e7-921e-e1c775f0704c",
+                      "rates": [
+                        {
+                          "rateCodeId": "00000000-0000-0000-0000-000000000000",
+                          "cancellationPolicyId": "16c4f160-6288-42b7-9aac-457f04a71616",
+                          "dayFlag": "1234567",
+                          "singlePrice": "3,000.00",
+                          "doublePrice": "3,000.00",
+                          "xbedPrice": "1,000.00",
+                          "xbedChildPrice": "500.00",
+                          "bfPrice": "400.00",
+                          "bfChildPrice": "200.00",
+                          "unitMonth": "0.00",
+                          "unitDay": "0.00",
+                          "minStay": 0
+                        }
+                      ]
+                    },
+                    {
+                      "chk": true,
+                      "hotelSeasonId": "4cf7013a-cf05-4db9-9e0c-6c5d07957da5",
+                      "rates": [
+                        {
+                          "rateCodeId": "00000000-0000-0000-0000-000000000000",
+                          "cancellationPolicyId": "16c4f160-6288-42b7-9aac-457f04a71616",
+                          "dayFlag": "1234567",
+                          "singlePrice": "2,500.00",
+                          "doublePrice": "2,500.00",
+                          "xbedPrice": "1,000.00",
+                          "xbedChildPrice": "500.00",
+                          "bfPrice": "400.00",
+                          "bfChildPrice": "200.00",
+                          "unitMonth": "0.00",
+                          "unitDay": "0.00",
+                          "minStay": 0
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "chk": true,
+              "markets": [
+                {
+                  "marketId": "ffffffff-ffff-ffff-ffff-ffffffffffff"
+                }
+              ],
+              "rateSegments": [
+                {
+                  "chk": true,
+                  "rateSegmentId": "00000000-0000-0000-0000-000000000000",
+                  "hotelSeasons": [
+                    {
+                      "chk": true,
+                      "hotelSeasonId": "a7018879-0cfc-4244-8d60-cea5c943e7d5",
+                      "rates": [
+                        {
+                          "rateCodeId": "00000000-0000-0000-0000-000000000000",
+                          "cancellationPolicyId": "16c4f160-6288-42b7-9aac-457f04a71616",
+                          "dayFlag": "1234567",
+                          "singlePrice": "4,100.00",
+                          "doublePrice": "4,100.00",
+                          "xbedPrice": "1,000.00",
+                          "xbedChildPrice": "500.00",
+                          "bfPrice": "400.00",
+                          "bfChildPrice": "200.00",
+                          "unitMonth": "0.00",
+                          "unitDay": "0.00",
+                          "minStay": 0
+                        }
+                      ]
+                    },
+                    {
+                      "chk": true,
+                      "hotelSeasonId": "453fcdf8-ff67-41e7-921e-e1c775f0704c",
+                      "rates": [
+                        {
+                          "rateCodeId": "00000000-0000-0000-0000-000000000000",
+                          "cancellationPolicyId": "16c4f160-6288-42b7-9aac-457f04a71616",
+                          "dayFlag": "1234567",
+                          "singlePrice": "3,600.00",
+                          "doublePrice": "3,600.00",
+                          "xbedPrice": "1,000.00",
+                          "xbedChildPrice": "500.00",
+                          "bfPrice": "400.00",
+                          "bfChildPrice": "200.00",
+                          "unitMonth": "0.00",
+                          "unitDay": "0.00",
+                          "minStay": 0
+                        }
+                      ]
+                    },
+                    {
+                      "chk": true,
+                      "hotelSeasonId": "4cf7013a-cf05-4db9-9e0c-6c5d07957da5",
+                      "rates": [
+                        {
+                          "rateCodeId": "00000000-0000-0000-0000-000000000000",
+                          "cancellationPolicyId": "16c4f160-6288-42b7-9aac-457f04a71616",
+                          "dayFlag": "1234567",
+                          "singlePrice": "3,100.00",
+                          "doublePrice": "3,100.00",
+                          "xbedPrice": "1,000.00",
+                          "xbedChildPrice": "500.00",
+                          "bfPrice": "400.00",
+                          "bfChildPrice": "200.00",
+                          "unitMonth": "0.00",
+                          "unitDay": "0.00",
+                          "minStay": 0
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "chk": true,
+          "mealTypeId": "8ac6b3d1-9f81-4fe3-8bac-96a384ccc913",
+          "marketGroups": [
+            {
+              "chk": true,
+              "markets": [
+                {
+                  "marketId": "4f1c1628-59c7-48bb-818e-771debf38aba"
+                }
+              ],
+              "rateSegments": [
+                {
+                  "chk": true,
+                  "rateSegmentId": "00000000-0000-0000-0000-000000000000",
+                  "hotelSeasons": [
+                    {
+                      "chk": true,
+                      "hotelSeasonId": "a7018879-0cfc-4244-8d60-cea5c943e7d5",
+                      "rates": [
+                        {
+                          "rateCodeId": "00000000-0000-0000-0000-000000000000",
+                          "cancellationPolicyId": "16c4f160-6288-42b7-9aac-457f04a71616",
+                          "dayFlag": "1234567",
+                          "singlePrice": "4,000.00",
+                          "doublePrice": "4,000.00",
+                          "xbedPrice": "100.00",
+                          "xbedChildPrice": "500.00",
+                          "bfPrice": "400.00",
+                          "bfChildPrice": "200.00",
+                          "unitMonth": "0.00",
+                          "unitDay": "0.00",
+                          "minStay": 0
+                        }
+                      ]
+                    },
+                    {
+                      "chk": true,
+                      "hotelSeasonId": "453fcdf8-ff67-41e7-921e-e1c775f0704c",
+                      "rates": [
+                        {
+                          "rateCodeId": "00000000-0000-0000-0000-000000000000",
+                          "cancellationPolicyId": "16c4f160-6288-42b7-9aac-457f04a71616",
+                          "dayFlag": "1234567",
+                          "singlePrice": "3,500.00",
+                          "doublePrice": "3,500.00",
+                          "xbedPrice": "1,000.00",
+                          "xbedChildPrice": "500.00",
+                          "bfPrice": "400.00",
+                          "bfChildPrice": "200.00",
+                          "unitMonth": "0.00",
+                          "unitDay": "0.00",
+                          "minStay": 0
+                        }
+                      ]
+                    },
+                    {
+                      "chk": true,
+                      "hotelSeasonId": "4cf7013a-cf05-4db9-9e0c-6c5d07957da5",
+                      "rates": [
+                        {
+                          "rateCodeId": "00000000-0000-0000-0000-000000000000",
+                          "cancellationPolicyId": "16c4f160-6288-42b7-9aac-457f04a71616",
+                          "dayFlag": "1234567",
+                          "singlePrice": "3,000.00",
+                          "doublePrice": "3,000.00",
+                          "xbedPrice": "1,000.00",
+                          "xbedChildPrice": "500.00",
+                          "bfPrice": "400.00",
+                          "bfChildPrice": "200.00",
+                          "unitMonth": "0.00",
+                          "unitDay": "0.00",
+                          "minStay": 0
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "chk": true,
+              "markets": [
+                {
+                  "marketId": "ffffffff-ffff-ffff-ffff-ffffffffffff"
+                }
+              ],
+              "rateSegments": [
+                {
+                  "chk": true,
+                  "rateSegmentId": "00000000-0000-0000-0000-000000000000",
+                  "hotelSeasons": [
+                    {
+                      "chk": true,
+                      "hotelSeasonId": "4cf7013a-cf05-4db9-9e0c-6c5d07957da5",
+                      "rates": [
+                        {
+                          "rateCodeId": "00000000-0000-0000-0000-000000000000",
+                          "cancellationPolicyId": "16c4f160-6288-42b7-9aac-457f04a71616",
+                          "dayFlag": "1234567",
+                          "singlePrice": "3,600.00",
+                          "doublePrice": "3,600.00",
+                          "xbedPrice": "1,000.00",
+                          "xbedChildPrice": "500.00",
+                          "bfPrice": "400.00",
+                          "bfChildPrice": "200.00",
+                          "unitMonth": "0.00",
+                          "unitDay": "0.00",
+                          "minStay": 0
+                        }
+                      ]
+                    },
+                    {
+                      "chk": true,
+                      "hotelSeasonId": "453fcdf8-ff67-41e7-921e-e1c775f0704c",
+                      "rates": [
+                        {
+                          "rateCodeId": "00000000-0000-0000-0000-000000000000",
+                          "cancellationPolicyId": "16c4f160-6288-42b7-9aac-457f04a71616",
+                          "dayFlag": "1234567",
+                          "singlePrice": "4,100.00",
+                          "doublePrice": "4,100.00",
+                          "xbedPrice": "1,000.00",
+                          "xbedChildPrice": "500.00",
+                          "bfPrice": "400.00",
+                          "bfChildPrice": "200.00",
+                          "unitMonth": "0.00",
+                          "unitDay": "0.00",
+                          "minStay": 0
+                        }
+                      ]
+                    },
+                    {
+                      "chk": true,
+                      "hotelSeasonId": "a7018879-0cfc-4244-8d60-cea5c943e7d5",
+                      "rates": [
+                        {
+                          "rateCodeId": "00000000-0000-0000-0000-000000000000",
+                          "cancellationPolicyId": "16c4f160-6288-42b7-9aac-457f04a71616",
+                          "dayFlag": "1234567",
+                          "singlePrice": "4,600.00",
+                          "doublePrice": "4,600.00",
+                          "xbedPrice": "1,000.00",
+                          "xbedChildPrice": "500.00",
+                          "bfPrice": "400.00",
+                          "bfChildPrice": "200.00",
+                          "unitMonth": "0.00",
+                          "unitDay": "0.00",
+                          "minStay": 0
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
