@@ -8,6 +8,8 @@ const books = JSON.parse(readFileSync.readFileSync(__dirname + '/books.json', 'u
 const genres = JSON.parse(readFileSync.readFileSync(__dirname + '/genres.json', 'utf-8').toString());
 const data = JSON.parse(readFileSync.readFileSync(__dirname + '/data.json', 'utf-8').toString());
 
+// https://marketplace.visualstudio.com/items?itemName=MariusAlchimavicius.json-to-ts&source=post_page-----c1b18ea668db----------------------
+
 function* idSequence(initial) {
   let i = initial;
   while (true) {

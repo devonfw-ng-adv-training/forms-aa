@@ -1,11 +1,10 @@
 import {Injectable} from '@angular/core';
 import {FormBuilder} from '@angular/forms';
-import {HttpClient} from '@angular/common/http';
 
 @Injectable()
 export class MyService {
 
-  constructor(public fb: FormBuilder, private http: HttpClient) {
+  constructor(public fb: FormBuilder) {
 
   }
 
@@ -71,9 +70,5 @@ export class MyService {
       unitDay: [element.unitDay === undefined ? '' : parseFloat(element.unitDay).toFixed(2)],
       minStay: [element.minStay],
     });
-  }
-
-  fetchApi() {
-    return this.http.get('api/data');
   }
 }

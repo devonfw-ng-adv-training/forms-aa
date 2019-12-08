@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {FormArray, FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {MyService} from '../app/service.service';
+import {MyService} from './service.service';
+import {HotelRestService} from './service/hotel-rest.service';
+import {Hotel} from './model/hotel';
 
 @Component({
   selector: 'my-app',
@@ -11,15 +13,16 @@ import {MyService} from '../app/service.service';
 export class AppComponent implements OnInit {
   name = 'Angular';
   form: FormGroup;
-  data: any;
+  data: Hotel;
 
-  constructor(public fb: FormBuilder, public service: MyService) {
+  constructor(public fb: FormBuilder,
+              public service: MyService,
+              private hotelRestService: HotelRestService) {
     this.form = this.createForm();
-    this.service.fetchApi().subscribe(data => this.data = data);
   }
 
   ngOnInit() {
-    this.service.fetchApi().subscribe(data => {
+    this.hotelRestService.getHotels().subscribe((data: Hotel) => {
       this.data = data;
       this.mapData();
     });
