@@ -17,7 +17,7 @@ import {SelectBoxItem} from './select-box-item';
 })
 export class CustomizedSelectBoxComponent implements OnInit, ControlValueAccessor {
   @Input() placeholder: string;
-  @Input() options: SelectBoxItem[] = [];
+  @Input() selectBoxItems: SelectBoxItem[] = [];
 
   @ViewChild(MatSelect, {static: true}) matSelect: MatSelect;
 
@@ -60,6 +60,6 @@ export class CustomizedSelectBoxComponent implements OnInit, ControlValueAccesso
   }
 
   private findById(id: number): SelectBoxItem {
-    return this.options.find(option => option.id === id);
+    return this.selectBoxItems.find(option => option.id === id);
   }
 }

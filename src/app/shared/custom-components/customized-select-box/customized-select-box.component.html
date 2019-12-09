@@ -1,10 +1,9 @@
 <mat-form-field>
   <mat-select placeholder={{placeholder}} (selectionChange)="onSelectionChange()">
     <mat-select-trigger>{{selected}}</mat-select-trigger>
-    <mat-option *ngFor="let genre of options" [value]="genre.id">
-      <mat-icon>{{genre.icon}}</mat-icon>
-      {{genre.name}}
+    <mat-option *ngFor="let selectBoxItem of selectBoxItems" [value]="selectBoxItem.id">
+      <mat-icon>{{selectBoxItem.icon}}</mat-icon>
+      {{selectBoxItem.name}}
     </mat-option>
   </mat-select>
 </mat-form-field>
-
