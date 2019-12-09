@@ -6,6 +6,7 @@ const {find, includes, max, map, isString} = require('lodash');
 
 const books = JSON.parse(readFileSync.readFileSync(__dirname + '/books.json', 'utf-8').toString());
 const genres = JSON.parse(readFileSync.readFileSync(__dirname + '/genres.json', 'utf-8').toString());
+const order = JSON.parse(readFileSync.readFileSync(__dirname + '/order.json', 'utf-8').toString());
 
 function* idSequence(initial) {
   let i = initial;
@@ -40,6 +41,12 @@ app.get('/api/book', (req, res) => {
     res.json(books);
   }
 );
+
+app.get('/api/order', (req, res) => {
+    res.json(order);
+  }
+);
+
 
 app.listen(9000, () => {
   console.log('Server listening on port 9000!');

@@ -1,0 +1,29 @@
+{
+  "generalInfo": {
+    "lastName": "Hbr",
+    "firstName": "Ph"
+  },
+  "billing": {
+    "info": {
+      "bank": "Weltbank",
+      "validUntil": "2019-12-23T23:00:00.000Z",
+      "iban": "DE123123125234523"
+    },
+    "address": {
+      "street": "Potsdamer Platz 5",
+      "zipCode": "13337",
+      "city": "Berlin"
+    }
+  },
+  "delivery": {
+    "info": {
+      "courier": "DHL",
+      "isExpress": false
+    },
+    "address": {
+      "street": "Potsdamer Platz 5",
+      "zipCode": "13337",
+      "city": "Berlin"
+    }
+  }
+}

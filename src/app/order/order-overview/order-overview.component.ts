@@ -1,5 +1,6 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {FormControl, FormGroup, FormGroupDirective} from '@angular/forms';
+import {OrderRestService} from '../service/order-rest.service';
 
 @Component({
   selector: 'app-order-overview',
@@ -11,7 +12,7 @@ export class OrderOverviewComponent implements OnInit {
   form: FormGroup;
   submitted: boolean;
 
-  constructor() {
+  constructor(private orderRestService: OrderRestService) {
   }
 
   ngOnInit() {
@@ -26,6 +27,9 @@ export class OrderOverviewComponent implements OnInit {
         address: new FormControl()
       })
     });
+
+    this.orderRestService.getOrder()
+      .subscribe(order => this.form.patchValue(order, {emitEvent: false}));
   }
 
   apply(): void {
