@@ -26,7 +26,7 @@ import {DeliveryInfoComponent} from './delivery-info/delivery-info.component';
     MatGridListModule,
     MatCheckboxModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
   ],
   declarations: [OrderOverviewComponent, GeneralInfoComponent, AddressComponent, BillingInfoComponent, DeliveryInfoComponent],
 })

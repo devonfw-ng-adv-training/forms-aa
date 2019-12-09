@@ -9,6 +9,9 @@ import {routes} from './shared/routes/routes';
 import {BookModule} from './book/book.module';
 import {HttpClientModule} from '@angular/common/http';
 import {OrderModule} from './order/order.module';
+import {RootStoreModule} from './root-store/root-store.module';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,7 +23,9 @@ import {OrderModule} from './order/order.module';
     RouterModule.forRoot(routes),
     // feature modules
     BookModule,
-    OrderModule
+    OrderModule,
+    RootStoreModule,
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]
