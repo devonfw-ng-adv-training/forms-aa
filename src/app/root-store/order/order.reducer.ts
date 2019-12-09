@@ -1,5 +1,6 @@
-import {Action, createReducer} from '@ngrx/store';
+import {Action, createReducer, on} from '@ngrx/store';
 import {Order} from '../../order/order';
+import * as OrderAction from './order.actions';
 
 export const orderFeatureKey = 'order';
 
@@ -13,6 +14,7 @@ export const initialState: OrderState = {
 
 const orderReducer = createReducer(
   initialState,
+  on(OrderAction.finishLoadOrder, (state: OrderState, {order}) => ({...state, order: order}))
 );
 
 export function reducer(state: OrderState | undefined, action: Action) {

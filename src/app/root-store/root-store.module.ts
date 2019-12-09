@@ -3,6 +3,8 @@ import {CommonModule} from '@angular/common';
 import {StoreModule} from '@ngrx/store';
 import {OrderStoreModule} from './order/order-store.module';
 import {metaReducers, reducers} from './index';
+import {OrderEffects} from './order/order.effects';
+import {EffectsModule} from '@ngrx/effects';
 
 
 @NgModule({
@@ -16,7 +18,8 @@ import {metaReducers, reducers} from './index';
         strictStateImmutability: true,
         strictActionImmutability: true,
       }
-    })
+    }),
+    EffectsModule.forRoot([OrderEffects]),
   ],
   exports: [OrderStoreModule]
 })
