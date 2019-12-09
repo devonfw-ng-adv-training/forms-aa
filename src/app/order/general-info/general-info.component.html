@@ -1,9 +1,9 @@
-<div formGroupName="generalInfo">
+<form [formGroup]="form">
   <div class="form-group row">
     <mat-form-field>
       <label for="firstname">First name</label>
       <input id="firstname" matInput placeholder="First name" formControlName="firstName">
-      <mat-error *ngIf="form.form.get('generalInfo').get('firstName').hasError('required')">
+      <mat-error *ngIf="form.get('firstName').hasError('required')">
         First name is <strong>required</strong>
       </mat-error>
     </mat-form-field>
@@ -12,9 +12,9 @@
     <mat-form-field>
       <label for="lastname">Last name</label>
       <input id="lastname" matInput placeholder="Last name" formControlName="lastName">
-      <mat-error *ngIf="form.form.get('generalInfo').get('lastName').hasError('required')">
+      <mat-error *ngIf="form.get('lastName').hasError('required')">
         Last name is <strong>required</strong>
       </mat-error>
     </mat-form-field>
   </div>
-</div>
+</form>

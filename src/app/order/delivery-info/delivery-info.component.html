@@ -1,0 +1,14 @@
+<form [formGroup]="form">
+  <div class="form-group row">
+    <mat-form-field>
+      <label for="courier">Courier</label>
+      <input id="courier" matInput placeholder="Courier" formControlName="courier">
+      <mat-error *ngIf="form.get('courier').hasError('required')">
+        Courier is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+  </div>
+  <div class="form-group row">
+      <mat-checkbox formControlName="isExpress">Express Delivery?</mat-checkbox>
+  </div>
+</form>

@@ -1,10 +1,30 @@
 <form [formGroup]="form" (submit)="apply()" [class.ng-submit]="submitted">
-  <app-general-info></app-general-info>
-  <app-address formControlName="address" [isParentSubmitted]="submitted"></app-address>
-
+  <mat-grid-list cols="3">
+    <mat-grid-tile>
+      <mat-grid-tile-header>
+        <mat-label>General Info</mat-label>
+      </mat-grid-tile-header>
+      <app-general-info formControlName="generalInfo" [isParentSubmitted]="submitted"></app-general-info>
+    </mat-grid-tile>
+    <mat-grid-tile formGroupName="billing">
+      <mat-grid-tile-header>
+        <mat-label>Billing Info</mat-label>
+      </mat-grid-tile-header>
+      <app-billing-info formControlName="info" [isParentSubmitted]="submitted"></app-billing-info>
+      <app-address formControlName="address" [isParentSubmitted]="submitted"></app-address>
+    </mat-grid-tile>
+    <mat-grid-tile formGroupName="delivery">
+      <mat-grid-tile-header>
+        <mat-label>Delivery Info</mat-label>
+      </mat-grid-tile-header>
+      <app-delivery-info formControlName="info" [isParentSubmitted]="submitted"></app-delivery-info>
+      <app-address formControlName="address" [isParentSubmitted]="submitted"></app-address>
+    </mat-grid-tile>
+  </mat-grid-list>
   <div class="form-group row">
     <button mat-raised-button color="primary" type="submit">Apply</button>
-    <button mat-stroked-button color="warn" type="button">Cancel</button>
+    <button mat-stroked-button color="secondary" type="button">Cancel</button>
+    <button mat-flat-button color="warn" type="button" (click)="resetForm()">Reset</button>
   </div>
 
   <div *ngIf="submitted && form.valid" style="color: green; font-size: xx-large">

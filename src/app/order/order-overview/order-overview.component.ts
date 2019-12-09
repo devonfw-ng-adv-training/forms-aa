@@ -16,7 +16,15 @@ export class OrderOverviewComponent implements OnInit {
 
   ngOnInit() {
     this.form = new FormGroup({
-      address: new FormControl(),
+      generalInfo: new FormControl(),
+      billing: new FormGroup({
+        info: new FormControl(),
+        address: new FormControl(),
+      }),
+      delivery: new FormGroup({
+        info: new FormControl(),
+        address: new FormControl()
+      })
     });
   }
 
@@ -30,7 +38,7 @@ export class OrderOverviewComponent implements OnInit {
     }
   }
 
-  private resetForm(): void {
+  public resetForm(): void {
     this.submitted = false;
     this.formDirective.resetForm();
   }

@@ -3,27 +3,18 @@
     <mat-form-field>
       <label for="street">Street</label>
       <input id="street" matInput placeholder="Street" formControlName="street">
-      <mat-error *ngIf="form.get('street').hasError('required')">
-        Street is <strong>required</strong>
-      </mat-error>
     </mat-form-field>
   </div>
   <div class="form-group row">
     <mat-form-field>
       <label for="zip">Zip code</label>
       <input id="zip" matInput placeholder="Zip code" formControlName="zipCode">
-      <mat-error *ngIf="form.get('zipCode').hasError('required')">
-        Zip code is <strong>required</strong>
-      </mat-error>
     </mat-form-field>
   </div>
   <div class="form-group row">
     <mat-form-field>
       <label for="city">City</label>
       <input id="city" matInput placeholder="City" formControlName="city">
-      <mat-error *ngIf="form.get('city').hasError('required')">
-        City is <strong>required</strong>
-      </mat-error>
     </mat-form-field>
   </div>
 </form>
