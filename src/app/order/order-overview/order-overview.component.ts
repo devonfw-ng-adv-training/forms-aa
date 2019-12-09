@@ -1,10 +1,10 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
-import {FormControl, FormGroup, FormGroupDirective} from '@angular/forms';
+import {Component, OnInit} from '@angular/core';
+import {FormControl, FormGroup} from '@angular/forms';
 import {OrderState} from '../../root-store/order/order.reducer';
 import {select, Store} from '@ngrx/store';
-import {triggerLoadOrder} from '../../root-store/order/order.actions';
+import {resetOrder, triggerLoadOrder} from '../../root-store/order/order.actions';
 import {selectOrder} from '../../root-store/order/order.selectors';
-import {filter} from 'rxjs/operators';
+import {Order} from '../order';
 
 @Component({
   selector: 'app-order-overview',
@@ -12,9 +12,34 @@ import {filter} from 'rxjs/operators';
   styleUrls: ['./order-overview.component.scss']
 })
 export class OrderOverviewComponent implements OnInit {
-  @ViewChild(FormGroupDirective, {static: false}) formDirective: FormGroupDirective;
   form: FormGroup;
   submitted: boolean;
+
+  private emptyOrder: Order = {
+    delivery: {
+      address: {
+        zipCode: null,
+        city: null,
+        street: null
+      }, info: {
+        courier: null,
+        isExpress: false
+      }
+    }, billing: {
+      address: {
+        zipCode: null,
+        city: null,
+        street: null
+      }, info: {
+        bank: null,
+        iban: null,
+        validUntil: null
+      }
+    }, generalInfo: {
+      firstName: null,
+      lastName: null
+    }
+  };
 
   constructor(private store$: Store<OrderState>) {
   }
@@ -33,8 +58,14 @@ export class OrderOverviewComponent implements OnInit {
       })
     });
 
-    this.store$.pipe(select(selectOrder), filter(val => !!val))
-      .subscribe(order => this.form.patchValue(order, {emitEvent: false}));
+    this.store$.pipe(select(selectOrder))
+      .subscribe(order => {
+        if (order) {
+          this.form.patchValue(order, {emitEvent: false});
+        } else {
+          this.form.setValue(this.emptyOrder);
+        }
+      });
   }
 
   apply(): void {
@@ -49,6 +80,6 @@ export class OrderOverviewComponent implements OnInit {
 
   public resetForm(): void {
     this.submitted = false;
-    this.formDirective.resetForm();
+    this.store$.dispatch(resetOrder());
   }
 }

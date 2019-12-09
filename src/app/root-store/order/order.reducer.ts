@@ -14,7 +14,8 @@ export const initialState: OrderState = {
 
 const orderReducer = createReducer(
   initialState,
-  on(OrderAction.finishLoadOrder, (state: OrderState, {order}) => ({...state, order: order}))
+  on(OrderAction.finishLoadOrder, (state: OrderState, {order}) => ({...state, order: order})),
+  on(OrderAction.resetOrder, (state: OrderState) => ({state, order: null}))
 );
 
 export function reducer(state: OrderState | undefined, action: Action) {
