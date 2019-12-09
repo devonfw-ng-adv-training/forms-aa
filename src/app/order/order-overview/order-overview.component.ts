@@ -1,6 +1,9 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {FormControl, FormGroup, FormGroupDirective} from '@angular/forms';
 import {OrderRestService} from '../service/order-rest.service';
+import {OrderState} from '../../root-store/order/order.reducer';
+import {select, Store} from '@ngrx/store';
+import {finishLoadOrder, triggerLoadOrder} from '../../root-store/order/order.actions';
 
 @Component({
   selector: 'app-order-overview',
@@ -12,10 +15,13 @@ export class OrderOverviewComponent implements OnInit {
   form: FormGroup;
   submitted: boolean;
 
-  constructor(private orderRestService: OrderRestService) {
+  constructor(
+    private store$: Store<OrderState>,
+    private orderRestService: OrderRestService) {
   }
 
   ngOnInit() {
+    this.store$.dispatch(triggerLoadOrder);
     this.form = new FormGroup({
       generalInfo: new FormControl(),
       billing: new FormGroup({
@@ -28,7 +34,7 @@ export class OrderOverviewComponent implements OnInit {
       })
     });
 
-    this.orderRestService.getOrder()
+    this.store$.pipe(select(finishLoadOrder))
       .subscribe(order => this.form.patchValue(order, {emitEvent: false}));
   }
 
