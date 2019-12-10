@@ -15,6 +15,14 @@ import {
 import {AddressComponent} from './address/address.component';
 import {BillingInfoComponent} from './billing-info/billing-info.component';
 import {DeliveryInfoComponent} from './delivery-info/delivery-info.component';
+import {RouterModule, Routes} from '@angular/router';
+
+const orderRoutes: Routes = [
+  {
+    path: '',
+    component: OrderOverviewComponent
+  }
+];
 
 @NgModule({
   imports: [
@@ -27,8 +35,10 @@ import {DeliveryInfoComponent} from './delivery-info/delivery-info.component';
     MatCheckboxModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    RouterModule.forChild(orderRoutes)
   ],
   declarations: [OrderOverviewComponent, GeneralInfoComponent, AddressComponent, BillingInfoComponent, DeliveryInfoComponent],
+  exports: [RouterModule]
 })
 export class OrderModule {
 }

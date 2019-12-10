@@ -23,7 +23,6 @@ import { environment } from '../environments/environment';
     RouterModule.forRoot(routes),
     // feature modules
     BookModule,
-    OrderModule,
     RootStoreModule,
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production })
   ],
