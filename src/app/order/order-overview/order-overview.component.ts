@@ -4,7 +4,7 @@ import {OrderState} from '../../root-store/order/order.reducer';
 import {select, Store} from '@ngrx/store';
 import {resetOrder, triggerLoadOrder} from '../../root-store/order/order.actions';
 import {selectOrder} from '../../root-store/order/order.selectors';
-import {Order} from '../order';
+import {filter} from 'rxjs/operators';
 
 @Component({
   selector: 'app-order-overview',
@@ -14,32 +14,6 @@ import {Order} from '../order';
 export class OrderOverviewComponent implements OnInit {
   form: FormGroup;
   submitted: boolean;
-
-  private emptyOrder: Order = {
-    delivery: {
-      address: {
-        zipCode: null,
-        city: null,
-        street: null
-      }, info: {
-        courier: null,
-        isExpress: false
-      }
-    }, billing: {
-      address: {
-        zipCode: null,
-        city: null,
-        street: null
-      }, info: {
-        bank: null,
-        iban: null,
-        validUntil: null
-      }
-    }, generalInfo: {
-      firstName: null,
-      lastName: null
-    }
-  };
 
   constructor(private store$: Store<OrderState>) {
   }
@@ -58,14 +32,8 @@ export class OrderOverviewComponent implements OnInit {
       })
     });
 
-    this.store$.pipe(select(selectOrder))
-      .subscribe(order => {
-        if (order) {
-          this.form.patchValue(order, {emitEvent: false});
-        } else {
-          this.form.setValue(this.emptyOrder);
-        }
-      });
+    this.store$.pipe(select(selectOrder), filter(val => !!val))
+      .subscribe(order => this.form.patchValue(order, {emitEvent: false}));
   }
 
   apply(): void {

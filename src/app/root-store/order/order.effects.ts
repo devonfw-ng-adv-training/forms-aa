@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Actions, createEffect, ofType} from '@ngrx/effects';
-import {map, mergeMap, tap} from 'rxjs/operators';
+import {map, mergeMap} from 'rxjs/operators';
 import {Observable} from 'rxjs';
 import * as OrderAction from './order.actions';
 import {Action} from '@ngrx/store';
@@ -12,10 +12,8 @@ import {Order} from '../../order/order';
 export class OrderEffects {
   loadOrder$: Observable<Action> = createEffect(() => this.actions$.pipe(
     ofType(OrderAction.triggerLoadOrder),
-    tap(console.log),
     mergeMap(() => this.orderRestService.getOrder()
-      .pipe(map((order: Order) =>
-        OrderAction.finishLoadOrder({order})), tap(console.log)),
+      .pipe(map((order: Order) => OrderAction.finishLoadOrder({order}))),
     )),
   );
 
